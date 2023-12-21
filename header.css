@@ -1,0 +1,17 @@
+/*  
+*
+* header.css
+* 
+*  Version 1
+*
+* 21/12/2023  
+*	
+* @author Emma Carroll, Student ID x20226314
+*
+*/
+h1, h2{
+    text-align: center;
+    padding: 30px;
+    background-image: linear-gradient(to right, lightgreen,green);
+    margin-bottom: 0;
+  }

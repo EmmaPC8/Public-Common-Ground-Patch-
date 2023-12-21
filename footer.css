@@ -1,0 +1,28 @@
+/*  
+*
+* footer.css
+* 
+*  Version 1
+*
+* 21/12/2023  
+*	
+* @author Emma Carroll, Student ID x20226314
+*
+*/
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: lightgrey;
+    padding: 10px;
+    margin-top: 60px;
+}
+
+
+.nci{
+    height: 20px;
+    margin-top: 2px;
+    display: block;
+}

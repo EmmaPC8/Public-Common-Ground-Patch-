@@ -1,0 +1,62 @@
+ /*  
+*
+* login.css
+* 
+*  Version 1
+*
+* 21/12/2023  
+*	
+* @author Emma Carroll, Student ID x20226314
+*
+*/
+ .login-details, .input-row, .apllication-details {
+    font-family: "Montserrat", sans-serif;
+    align-items: center;
+    justify-content: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 20px;
+}
+
+
+label {
+    display: block;
+    color: rgb(121, 75, 7);
+    background: none;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+/* Button container styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+.loginbtn, .submitapp, .registerbtn{
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 10px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    border: none;
+    border-radius:30px;
+    background-color: white;
+    color: rgb(16, 163, 35);
+    cursor: pointer;
+    outline: 2px solid rgb(16, 163, 35);
+    text-align: center;
+  }
+  
+  button:hover {
+    background-color: rgb(16, 163, 35);
+    color: white;
+  }
+body{
+    background-image: linear-gradient(to bottom, white, lightgreen);
+  } 

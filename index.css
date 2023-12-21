@@ -1,0 +1,74 @@
+/*  
+*
+* index.css
+* 
+*  Version 1
+*
+* 21/12/2023  
+*	
+* @author Emma Carroll, Student ID x20226314
+*
+*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+
+
+h1 {
+  font-size: 70px;
+  text-align: center;
+  margin-top: 0px;
+  padding: 50px;
+  color: rgb(121, 75, 7);
+  background-image: linear-gradient(to right, lightgreen,green);
+  font-weight: 800;
+}
+
+
+
+
+  p {
+    background-image: url("images/pic2.png");
+    color: rgb(5, 5, 5);
+    width: calc(95%);
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+    text-align: center;
+    font-weight: 700;
+  }
+
+/* Button container styling */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Button styling */
+.loginbtn, .registerbtn{
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 10px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  border: none;
+  border-radius:30px;
+  background-color: white;
+  color: rgb(16, 163, 35);
+  cursor: pointer;
+  outline: 2px solid rgb(16, 163, 35);
+  text-align: center;
+}
+
+button:hover {
+  background-color: rgb(16, 163, 35);
+  color: white;
+}

@@ -1,0 +1,151 @@
+<!--
+*  Q&A.html
+*
+*  Version 1
+*
+* 21/12/2023  
+*	
+* @reference https://www.youtube.com/watch?v=vkqZC_rEkVA
+* @author Emma Carroll, Student ID x20226314
+*
+*-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A</title>
+    <!-- CSS -->
+ <link rel="stylesheet" href="LandListing.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="Q&AInputForm.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajaxibsfront-awesome/4.7.0/css/font-awesome.min.css">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ 
+</head>
+<body>
+    <!--navbar-->
+    <container id="nav-bar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <div class="container">
+                     <a class="navbar-brand" href="#"><img src="images/Logo.png"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="home.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Q&A</a></li>
+                        <li class="nav-item"><a class="nav-link" href="LandListing.html">Listed Land</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Donated Items</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="SeedaItemListing.html">Seeds</a></li>
+                                    <li><a class="dropdown-item" href="PlantItemListing.html">Plants</a></li>
+                                    <li><a class="dropdown-item" href="TreesItemListings.html">Trees</a></li>
+                                    <li><a class="dropdown-item" href="ToolsItemListing.html">Tools</a></li>
+                                </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Applications</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="donationFormApplicants.html">For Items</a></li>
+                                    <li><a class="dropdown-item" href="donationCVApplicants.html">To work on land</a></li>
+                                </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+          </nav>
+      </container>
+      
+
+        <!-- Ad block -->
+    <div style="max-width: 30%; margin:auto;">
+        <div class="container-fluid ">
+            <div class="advertisment-box">
+                <img src="images/addspace.PNG"  class="img-fluid" alt="Responsive image">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="title">
+        <h1>Q & A</h1>
+    </div>
+    <div class="instruction">
+        <p>Please fill out the following required submit your question</p>
+    </div>
+    <div class="clarify">The date/time field refers to when the question is submitted.</div>
+    <!--form submission-->
+    <form>
+            <div class="input-row">
+                <input type="Question" id="Question" name="Question" placeholder="● Enter Question">
+                <input type="username" id="username" name="username" placeholder="● Enter username">
+                <input type="datetime-local" id="datetime" name="datetime">
+                <button type="submit" id="submit">submit</button>
+            </div>
+    </form>
+    <div class="container mt-4 table-responsive">
+        <table class="table mb-4 align-middle table-bordered border-dark table-hover table-info table-striped caption-top">
+                <p>the following records all questions</p>
+                <thread>
+                    <tr class="table-warning">
+                        <th>Question</th>
+                        <th>Username</th>
+                        <th>Date</th>
+                        <th>Answers</th>
+                    </tr>
+                </thread>
+                <tbody></tbody>
+            </table>
+
+<!--footer-->
+</br>
+</br>
+<footer>
+    <span class="nci">&copy; &nbsp;NCI | All rights reservered </span>
+</footer>
+<!--bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script>
+    // @reference https://www.youtube.com/watch?v=vkqZC_rEkVA
+    const formEL = document.querySelector('form');
+    const tbodyEL = document.querySelector('tbody');
+    const tableEl = document.querySelector("table");
+    //populate the table with the values from the form
+    //@author Emma Carroll, Student ID x20226314
+    function addQuestion(e){
+        e.preventDefault();
+        const Question =document.getElementById('Question').value;
+        const username =document.getElementById('username').value;
+        const datetime =document.getElementById('datetime').value;
+        if(Question&&username&&datetime)//ensure the fields cant be empty when the user clicks on the submit button
+        tbodyEL.innerHTML +=`
+            <tr>
+                <td>${Question}</td>
+                <td class="align-bottom">${username}</td>
+                <td class="align-bottom">${datetime}</td>
+                <td class="align-bottom"><button class="answersbtn">Answers</button></td>
+            </tr>
+        `;
+        // Reset the form fields
+  document.querySelector('form').reset();
+    }
+        // @reference https://www.youtube.com/watch?v=vkqZC_rEkVA
+    function bringToForm(e) {
+        if (!e.target.classList.contains("answersbtn")) {
+          return;
+        }
+    //@author Emma Carroll, Student ID x20226314
+        window.location.href = 'answers.html';//bring to when answerbtn is clicked
+      }
+        // @reference https://www.youtube.com/watch?v=vkqZC_rEkVA
+      formEL.addEventListener('submit', addQuestion);
+    tableEl.addEventListener("click", bringToForm);
+    </script>
+    </body>
+</html>

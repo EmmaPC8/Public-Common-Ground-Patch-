@@ -1,0 +1,72 @@
+/*  
+*
+* itemListingInputForm.css
+* 
+*  Version 1
+*
+* 21/12/2023  
+*	
+* @author Emma Carroll, Student ID x20226314
+*
+*/
+form {
+    background-image: linear-gradient(to right, lightgreen,green);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  
+  .input-row{
+    position: relative;
+    display: flex;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    outline: 2px black;
+  }
+  
+  #descriptionItem {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding: 10px;
+  }
+  
+  #username, #datetime, #Location {
+    padding: 10px;
+  }
+  
+  
+  #submit {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: rgb(121, 75, 7);
+    padding: 10px;
+  }
+
+
+ .instruction{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 0px;
+    padding: 2px;
+    color: rgb(121, 75, 7);
+    background-image: linear-gradient(to bottom, white, lightgrey);
+    font-weight: 800;
+  }
+  .clarify{
+    font-size: 15px;
+    text-align: center;
+    padding: 2px;
+    font-weight: 600;
+  }
+  body{
+    background-image: linear-gradient(to bottom, white, rgb(251, 255, 140));
+
+  }
